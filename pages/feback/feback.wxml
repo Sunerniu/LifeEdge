@@ -1,0 +1,6 @@
+<text class="zzyqq">需要帮助可以联系我：</text>
+<text class="zzyqq">QQ:1814361313!!!</text>
+<text class="ortouch">或者点击</text>
+<button class='button' open-type="feedback">
+ <text class='button_title'>反馈建议</text>
+</button>

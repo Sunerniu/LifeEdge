@@ -1,0 +1,85 @@
+<!--pages/course/course.wxml-->
+<!-- <button>周视图</button> -->
+<view class="courseContainer">
+  <!-- 导航区域 -->
+  <scroll-view class="navScroll" scroll-x enable-flex scroll-into-view="t{{nowWeek?nowWeek-3:(pageNum>3?pageNum-2:0)}}" scroll-with-animation>
+    <view class="navItem" wx:for="{{weekArray}}" wx:key="index" id="t{{index}}">
+      <view 
+        class="navContent {{todayWeek == index+1 || index == pageNum?'active': ''}}" 
+        bindtap="changeNav" 
+        data-page="{{index}}">
+        {{todayWeek == index+1?item+'(本周)':item}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 日期区域 -->
+  <view class="date">
+    <view class="month">
+      <view>{{month}}</view>
+      <view>月</view>
+    </view>
+    <view class="day">
+      <view class="week {{todayMonth == monthNum && day == item?'todayDate':''}}" wx:for="{{nowDay}}" wx:key="index">
+        <view class="week-item">{{week[index]}}</view>
+        <view class="day-item">{{nowDay[index] == 1?(monthNum<12?monthNum+1:1)+'月':nowDay[index]}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 课表区域 -->
+  <scroll-view scroll-x="false" scroll-y scroll-top="{{scrollTop}}" class="courseScroll"
+    refresher-triggered = "{{isRefreshing}}"
+    refresher-enabled="{{true}}"
+    refresher-threshold="{{80}}" 
+    refresher-background="#E3E3E3"  
+    bindrefresherrefresh="topRefresh">
+    <view class="courseContent">
+        <view class="courseTime">
+            <view class="left">
+                <view class = "beforeClass" style="height:160rpx"></view>
+                <view class="class">1</view>
+                <view style="height:30rpx"></view>
+                <view class="class">2</view>
+                <view style="height:40rpx"></view>
+                <view class="class">3</view>
+                <view style="height:30rpx"></view>
+                <view class="class">4</view>
+                <view style="height:240rpx"></view>
+                <view class="class">5</view>
+                <view style="height:30rpx"></view>
+                <view class="class">6</view>
+                <view style="height:20rpx"></view>
+                <view class="class">7</view>
+                <view style="height:30rpx"></view>
+                <view class="class">8</view>
+                <view style="height:180rpx"></view>
+                <view class="class">9</view>
+                <view style="height:30rpx"></view>
+                <view class="class">10</view>
+                <view style="height:30rpx"></view>
+                <view class="class">11</view>
+                <view style="height:480rpx"></view>
+            </view>
+        <view>
+        </view>
+      </view>
+    <view class="course">
+        <view wx:for="{{wList[nowWeek]}}" wx:key="index" data-item="{{item}}" class="kcb-item" style="margin-left:{{item.isToday!=8?(item.isToday-1)*100:0}}rpx;margin-top:{{(item.beginAt-420)*2}}rpx;height:{{(item.endAt-item.beginAt)*2 }}rpx;" bindtap="showMessage">
+            <!--此处margin-top中的减360是将早上六点作为每天的起点，建议在导入每天时间最小值时使用minTime，1080是一天的最晚时间和最早时间差，1580是课表区域的像素值-->
+    
+            <view class="smalltext" style="background-color:{{item.color}}">
+                <view class="smalltextName">{{item.name}}</view>
+                <!-- <view hidden="{{(item.endAt-item.beginAt)<180}}" class="smalltextAddress">{{item.description}}</view> -->
+            </view>
+        </view>
+        <!-- <button bind:tap="getdata" style="position: relative; left: 179rpx; top: 1006rpx">按钮</button> -->
+    </view>
+    </view>
+   
+  
+  </scroll-view>
+ 
+
+
+</view>

@@ -1,0 +1,33 @@
+page {
+  background: rgb(248, 245, 245);
+ }
+.zzyqq{
+  display: block;
+  text-align: center;
+  font-size: 70rpx;
+}
+.ortouch{
+  display: block;
+  text-align: center;
+  font-size: 50rpx;
+  color: rgb(75, 27, 207);
+}
+ .button {
+  width: 100%;
+  background: rgb(92, 226, 152);
+  border: none;
+  text-align: center;
+  padding: 7px 10px;
+  margin: 0px;
+  line-height: 1.6;
+  border-radius: 0;
+ }
+  
+ .button::after {
+  border: none;
+  border-radius: 0;
+ }
+  
+ .button_title {
+  font-size: 1rem;
+ }

@@ -1,0 +1,57 @@
+{
+    "pages": [
+      
+      "pages/course/course",
+      "pages/week/week",
+      "pages/persondetail/persondetail",
+      "pages/feback/feback",
+      "pages/Clock/Clock",
+      "pages/todolist/todolist",
+      "pages/set/set",
+      "pages/todoDetail/todoDetail"
+    ],
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#84dcf1",
+      "navigationBarTitleText": "个人信息",
+      "navigationBarTextStyle": "black",
+      "enablePullDownRefresh": true
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+      "borderStyle": "white",
+      "list": [
+        {
+          "pagePath": "pages/course/course",
+          "text": "课程表",
+          "iconPath": "images/课程表.png",
+          "selectedIconPath": "images/课程表1.png"
+        },
+        {
+          "pagePath": "pages/week/week",
+          "text": "今日事件",
+          "iconPath": "images/daylist.png",
+          "selectedIconPath": "images/daylist1.png"
+        },
+        {
+          "pagePath": "pages/Clock/Clock",
+          "text": "番茄钟",
+          "iconPath": "images/clock.png",
+          "selectedIconPath": "images/clock1 (1).png"
+        },
+        {
+          "pagePath": "pages/todolist/todolist",
+          "text": "提醒事项",
+          "iconPath": "images/提醒事项.png",
+          "selectedIconPath": "images/提醒事项1.png"
+        },
+        {
+          "pagePath": "pages/set/set",
+          "text": "个人信息",
+          "iconPath": "images/个人.png",
+          "selectedIconPath": "images/个人1.png"
+        }
+      ]
+    }
+  }

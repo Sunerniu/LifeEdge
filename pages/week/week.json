@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "calendarweek":"../../calendar/perview/perview"
+  },
+    "navigationBarTitleText": "日视图",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+}

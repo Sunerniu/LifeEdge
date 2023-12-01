@@ -1,0 +1,32 @@
+<view class="containerss">
+  <block wx:for="{{todoLists}}" wx:key="*this">
+    <view class="list-item">
+
+        <image src="../../images/表单控件复选.png"  bindtap="tickToComplete" class="add-icon" wx:if="{{item.completeStatus}}" data-index="{{index}}"></image>
+        <image src="../../images/表单控件复选空.png"  bindtap="tickToComplete" class="add-icon" wx:if="{{!item.completeStatus}}" data-index="{{index}}"></image>
+      <view class="text-box">
+        <text class="{{ item.completeStatus && item.completeStatus === true ? 'text-line-through' : 'text-hidden' }}">{{item.currentInput}}</text>
+        <textarea class="weui-textarea {{ item.completeStatus && item.completeStatus === true ? 'text-transparent' : '' }}" placeholder="添加任务" bindinput="getInput" maxlength="700" data-id="{{item.id}}" value="{{item.currentInput}}" auto-focus="true" bindconfirm="editListItem"
+          show-confirm-bar="false" />
+      </view>
+     
+      <image class="icon-remove" src="../../images/关闭.png" class="icon-remove" bindtap="removeTodoHandle" data-index="{{ index }}"></image>
+    </view>
+  </block>
+  <view class="list-item">
+        <image src="../../images/加.png" class="add-icon"  bindtap="addListItem">
+            </image>
+    <view class="text-box">
+      <text class="text-hidden">{{currentInput}}</text>
+      <textarea class="weui-textarea" placeholder="添加任务" bindinput="getAddInput" maxlength="700" auto-focus="true" bindconfirm="addListItem" show-confirm-bar="false" value="{{currentInput}}">
+    </textarea>
+    </view>
+</view>
+     
+  <view class="footer">
+    {{ completedCount }} 个已完成
+  </view>
+  <navigator url="../todoDetail/todoDetail">
+        <image src="../../images/021_待办事项.png" class="icon-detail"></image>
+    </navigator>
+</view>

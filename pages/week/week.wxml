@@ -1,0 +1,39 @@
+<!--pages/calendarmonth/calendarmonth.wxml-->
+<view class="page">
+  <calendarweek bindmyevent="onMyEvent"></calendarweek>
+  <view class="time-bar">
+    <view class="time-item1">6:00</view>
+    <view class="time-item">7:00</view>
+    <view class="time-item">8:00</view>
+    <view class="time-item">9:00</view>
+    <view class="time-item">10:00</view>
+    <view class="time-item">11:00</view>
+    <view class="time-item">12:00</view>
+    <view class="time-item">13:00</view>
+    <view class="time-item">14:00</view>
+    <view class="time-item">15:00</view>
+    <view class="time-item">16:00</view>
+    <view class="time-item">17:00</view>
+    <view class="time-item">18:00</view>
+    <view class="time-item">19:00</view>
+    <view class="time-item">20:00</view>
+    <view class="time-item">21:00</view>
+    <view class="time-item">22:00</view>
+  </view> 
+  <view class="new-content">
+    <view  wx:for="{{todays}}" wx:for-item="calendarItem"  wx:key="idx" class="sbmf">
+      <view class="item" style="position: absolute; background-color:{{calendarItem.color}}; margin-top:{{(calendarItem.beginAt-360)*10/6}}rpx; height: {{(calendarItem.endAt-calendarItem.beginAt)*10/6}}rpx;">
+
+        <text class="table-day-text">{{calendarItem.name}}</text>
+          <view class="item-sub"> 
+            <view class="item-sub-content">
+              <view class="table-calendar-point"></view>
+              <text class="table-calendar-title">{{calendarItem.description}}</text>
+            </view>
+          </view>
+        
+
+      </view>
+    </view>
+  </view>
+</view>

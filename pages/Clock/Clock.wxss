@@ -1,0 +1,133 @@
+/**index.wxss**/
+page {
+  
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://picx.zhimg.com/80/v2-23f9b64149bf8ce2f7e5a0583fbd463c_720w.webp?source=1def8aca);
+  background-color: #84dcf1;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.settings-button {
+    display: flex;
+    width: 300rpx;
+    flex-wrap: wrap;
+    margin:auto;
+}
+.settings-button image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50rpx;
+    height: 50rpx;
+    margin: 50rpx;
+}
+.picker-row {
+    display: flex;
+    justify-content: space-between; /* 使picker组件分布在两侧 */
+    margin-bottom: 100px; /* 与下面元素的间距 */
+  }
+  
+  .picker {
+    flex: 1; /* 使picker组件平分空间 */
+    text-align: center; /* 文字居中 */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 37px; /* 增大字体大小 */
+  }
+  .a{
+    font-size: 27px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#ffffff;
+}
+
+.b{
+    font-size: 27px; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#ffffff;
+}
+  .picker-focus {
+    margin-right: 30px; 
+    color:#ffffff;
+  }
+  
+  .picker-break {
+    margin-left: 30px;
+    color:#ffffff;
+  }
+  
+  
+  
+.circle-button {
+    width: 100px; /* 按钮宽度 */
+    height: 100px; /* 按钮高度 */
+    line-height: 85px; /* 使文字垂直居中 */
+    border: 0 solid #ffffff;
+    border-radius: 500px;
+    background-color: #84dcf1;
+    color: white; 
+    font-size: 16px; 
+    text-align: center;
+    border: none; 
+}
+
+.circle-button:after {
+    content: ' '; /* 移除点击时的边框 */
+}
+.clock{
+    background-color: #84dcf1;
+    height: 100vh;
+    overflow: hidden;
+}
+.clock_button{
+    display: flex;
+    width: 300rpx;
+    flex-wrap: wrap;
+    margin:auto;
+}
+.clock_button image{
+    width: 50rpx;
+    height: 50rpx;
+    margin: 50rpx;
+}
+.count_down{
+    /* background-color: royalblue; */
+    width: 500rpx;
+    height: 500rpx;
+    margin:50rpx auto 50rpx auto;
+    position: relative;
+}
+.count_down .circle,.count_down .circle_active{
+    position: absolute;
+    width: 500rpx;
+    height: 500rpx;
+}
+.clock_text{
+    margin-top: 200rpx;
+    text-align: center;
+    font-size: 55rpx;
+    color: #ffffff;
+}
+.count_down .count_text{
+    position: absolute;
+    left: 100rpx;
+    top: 150rpx;
+    width: 200rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 100rpx;
+    text-align: center;
+    color: #ffffff;
+}

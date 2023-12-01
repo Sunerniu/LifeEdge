@@ -1,0 +1,45 @@
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.headphoto{
+  position: absolute;
+  left: 68rpx;
+  top: 93rpx; 
+  width: 231rpx; 
+  height: 220rpx; 
+  display: block; 
+  box-sizing: border-box;
+}
+.uni{
+  position: absolute; left: 400rpx; top: 120rpx;
+}
+.maj{
+  position: absolute; left: 400rpx; top: 188rpx;
+}
+.name{
+  position: absolute; left: 400rpx; top: 257rpx;
+}
+.myuni{
+  position: absolute; left: 486rpx; top: 120rpx
+}
+.mymaj{
+  position: absolute; left: 486rpx; top: 190rpx
+}
+.myname{
+  position: absolute; left: 486rpx; top: 256rpx
+}
+
+.person{
+  position: absolute; left: 316rpx; top: -8rpx;
+} 
+.ctable{
+  position: absolute; left: 316rpx; top: 125rpx;
+}
+.remind{
+  position: absolute; left: 316rpx; top: 250rpx;
+}
+.helpare{
+  position: absolute; left: 316rpx; top: 365rpx;
+}

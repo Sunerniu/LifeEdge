@@ -1,0 +1,23 @@
+<view class="containers" style="position: relative; left: 0rpx; top: 0rpx; width: 750rpx; height: 386rpx; display: block; box-sizing: border-box">
+
+  <image style="width: 214rpx; height: 211rpx; display: inline-block; box-sizing: border-box; position: relative; left: 86rpx; top: 102rpx" src="{{headphoto}}"/>
+  <text class="uni" >学校：</text>
+  <text class="maj" >专业：</text>
+  <text class="name" >名称：</text>
+  <text class="myuni" >福州大学</text>
+  <text class="mymaj" >计算机类</text>
+  <text class="myname" >{{username}}</text>
+  <view class="l1" style="position: relative; left: 0rpx; top: 196rpx; width: 750rpx; height: 116rpx; display: block; box-sizing: border-box">
+    <navigator url="../persondetail/persondetail" class="person" >个人信息</navigator>
+    <text class="ctable" bindtap="ccoure">课程表</text>
+    <text class="remind" bindtap="tongzhi">消息通知</text>
+    <navigator url="../feback/feback" class="helpare" >帮助与反馈</navigator>
+    <image style="position: relative; width: 60rpx; height: 60rpx; display: inline-block; box-sizing: border-box; left: 64rpx; top: -10rpx" src="../../images/021_我的-22.png" />
+    <image style="position: relative; width: 60rpx; height: 60rpx; display: block; box-sizing: border-box; left: 64rpx; top: 50rpx" src="../../images/021_设置.png" />
+    <image style="position: relative; width: 60rpx; height: 60rpx; display: block; box-sizing: border-box; left: 64rpx; top: 110rpx" src="../../images/021_文件.png" />
+    <image style="position: relative; width: 60rpx; height: 60rpx; display: block; box-sizing: border-box; left: 64rpx; top: 170rpx" src="../../images/021_分享-24.png" />
+  </view>
+</view>
+
+
+

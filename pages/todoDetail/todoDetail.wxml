@@ -1,0 +1,81 @@
+<view class="container">
+  <form bindsubmit="saveDetail">
+    <view class="list-item">
+      <view class="text-box">
+        <text class="text-hidden"></text>
+        <textarea class="weui-textarea" placeholder="任务标题" name="currentInput" bindinput="getInput" maxlength="1000" data-index="{{index}}" value="{{currentObj.currentInput}}" auto-focus="true" bindconfirm="editListItem" show-confirm-bar="false" />
+      </view>
+    </view>
+    <view class="list-item-box">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">是否提醒</view>
+          <view class="weui-cell__ft">
+            <switch name="dateStatus" bindchange="dateSwitchChange" checked="{{currentObj.dateStatus?true:false}}" />
+          </view>
+        </view>
+        <block>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">日期</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker mode="date" name="date" value="{{currentObj.date}}" start="2015-09-01" end="2040-09-01" bindchange="bindDateChange">
+                <view class="weui-input">{{currentObj.date}}</view>
+              </picker>
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">开始时间</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker mode="time" name="starttime" value="{{currentObj.beginAt}}" start="08:00" end="23:59" bindchange="bindStartTimeChange">
+                <view class="weui-input">{{currentObj.beginAt}}</view>
+              </picker>
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">结束时间</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker mode="time" name="endtime" value="{{currentObj.endAt}}" start="08:00" end="23:59" bindchange="bindEndTimeChange">
+                <view class="weui-input">{{currentObj.endAt}}</view>
+              </picker>
+            </view>
+          </view>
+          
+        </block>
+      </view>
+    </view>
+    <view class="list-item-box">
+      <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">颜色</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker bindchange="bindDateColorChange" value="{{currentObj.colorname}}" range="{{colornames}}" name="dateColor">
+                <view class="weui-select">{{currentObj.colorname}}</view>
+              </picker>
+            </view>
+          </view>
+    </view>
+    <view class="list-item-box">
+      <view class="weui-cells__title">任务详情</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" name="remark" placeholder="请输入文本" style="height: 3.3em" bindinput="remarkInputAction"  />
+            <view class="weui-textarea-counter">0/200</view>
+          </view>
+        </view>   
+      </view>
+    </view>
+    <view class="list-item-box">
+      <view class="weui-btn-area">
+        <button class="weui-btn" bindtap="handleButtonClick" type="primary">确定</button>
+      </view>
+    </view>
+  </form>
+</view>

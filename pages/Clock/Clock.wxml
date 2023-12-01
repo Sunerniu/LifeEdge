@@ -1,0 +1,46 @@
+
+<view hidden="{{isClock}}" class="container" style="position: relative; left: 0rpx; top: 0rpx">
+    
+    <view class="settings-button">
+        <image src="../../images/set.png" bindtap="setButtonClick"></image>
+    </view>
+    <view class="picker-row">
+        <picker mode="selector" range="{{focusTimes}}" value="{{focusTimeIndex}}" bindchange="bindFocusTimeChange">
+            <view class="picker picker-focus">
+                <view class="picker">
+                    <view style="position: relative; left: 0rpx; top: -162rpx" class="a">专注</view>
+                    <view style="position: relative; left: 0rpx; top: -142rpx" class="c">{{focusTimes[focusTimeIndex]}}:00</view>
+                </view>
+            </view>
+        </picker>
+
+        <picker mode="selector" range="{{breakTimes}}" value="{{breakTimeIndex}}" bindchange="bindBreakTimeChange">
+            <view class="picker picker-break">
+                <view class="picker">
+                    <view style="position: relative; left: 0rpx; top: -165rpx" class="b">休息</view>
+                    <view style="position: relative; left: 0rpx; top: -142rpx" class="d">{{breakTimes[breakTimeIndex]}}:00</view>
+                </view>
+            </view>
+        </picker>
+    </view>
+    <button class="circle-button" bindtap="onCircleButtonClick" style="position: relative; left: 0rpx; top: -97rpx">开始</button>
+
+</view>
+
+
+<view hidden="{{!isClock}}" class="clock">
+
+
+    <view hidden="{{break}}" class="clock_text" style="position: relative; left: 0rpx; top: -51rpx">{{clockText}}专注ing</view>
+    <view hidden="{{!break}}" class="clock_text" style="position: relative; left: 0rpx; top: -51rpx">{{clockText}}休息ing</view>
+    <view class="count_down">
+        <canvas type="2d" id="circle" class="circle" ></canvas>
+        <canvas type="2d" id="circle_active" class="circle_active" ></canvas>
+        <view class="count_text" style="width: 374rpx; height: 89rpx; display: block; box-sizing: border-box; left: 64rpx; top: 206rpx; position: absolute">{{timeStr}}</view>
+    </view>
+    <view class="clock_button" style="width: 468rpx; height: 165rpx; display: flex; box-sizing: border-box">
+        <image src="../../images/p1.png" bindtap="ClockPause" wx:if="{{playShow}}"  style="width: 128rpx; height: 128rpx; display: block; box-sizing: border-box"></image>
+        <image src="../../images/p2.png" bindtap="ClockPlay" style="width: 128rpx; height: 128rpx; display: block; box-sizing: border-box" wx:else ></image>
+        <image src="../../images/p3.png" bindtap="ClockSuspend"  style="width: 128rpx; height: 128rpx; display: block; box-sizing: border-box"></image>
+    </view>
+</view>

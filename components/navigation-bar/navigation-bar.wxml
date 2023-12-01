@@ -1,0 +1,4 @@
+<view class="container">
+    <button bindtap="startCountdown">开始</button>
+    <text>{{countdown}}</text>
+</view>
